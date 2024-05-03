@@ -6,9 +6,8 @@ import random
 # Define image size
 image_size = 101
 
-# Create randome delta functions as ideal point sources
+# Create randomly distributed delta functions as ideal point sources
 delta = np.zeros((image_size, image_size))
-
 for x in range(6):
     delta[int(random.choice(np.linspace(1,101,101))), int(random.choice(np.linspace(1,101,101)))] = 1
 
@@ -29,7 +28,7 @@ plt.figure(figsize=(10, 6))
 # Plot ideal point sources (delta function)
 plt.subplot(1, 3, 1)
 plt.imshow(delta, cmap='hot')
-plt.title('Ideal Point Source')
+plt.title('Ideal Point Sources')
 plt.axis('off')
 
 # Plot the PSF
@@ -41,7 +40,7 @@ plt.axis('off')
 # Plot the blurred image
 plt.subplot(1, 3, 3)
 plt.imshow(blurred_image, cmap='hot')
-plt.title('Blurred Image')
+plt.title('Output Image')
 plt.axis('off')
 
 # Adjust layout and titles
